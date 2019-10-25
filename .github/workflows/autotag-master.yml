@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1  # Necessary for local actions
-      - name: Bump version
-        uses: ./.github/actions/autotag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run a one-line script
+        run: echo Hello, world!
+#       - name: Bump version
+#         uses: ./.github/actions/autotag
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
