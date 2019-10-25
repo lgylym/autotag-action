@@ -18,11 +18,11 @@ new_tag=$(echo $old_tag | python /get_new_tag.py)
 
 echo "Pushing tag $new_tag to repo ..."
 
-# curl -s -X POST $git_refs_url \ 
-# -H "Authorization: token $GITHUB_TOKEN" \
-# -d @- << EOF
-# {
-#   "ref": "refs/tags/$new_tag",
-#   "sha": "$commit"
-# }
-# EOF
+curl -s -X POST $git_refs_url \
+-H "Authorization: token $GITHUB_TOKEN" \
+-d @- << EOF
+{
+  "ref": "refs/tags/$new_tag",
+  "sha": "$commit"
+}
+EOF
