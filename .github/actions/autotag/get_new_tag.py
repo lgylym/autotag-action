@@ -4,7 +4,6 @@ import sys
 
 
 def new_version(most_recent_version: str):
-    branch = os.environ.get("GITHUB_REF")
     current_year, current_week, _ = datetime.date.today().isocalendar()
     current_version = 0
 
@@ -17,9 +16,6 @@ def new_version(most_recent_version: str):
         current_version = old_version + 1
     new_tag = f"{current_year}.{current_week}.{current_version}"
     
-    if branch and branch != "master":
-        new_tag = "test." + new_tag
-
     print(new_tag)
 
 
