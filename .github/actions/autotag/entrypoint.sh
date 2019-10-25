@@ -14,7 +14,7 @@ if [ "$tag_commit" == "$commit" ]; then
 fi
 
 # get new tag
-new_tag=$(echo $old_tag | python get_new_tag.py)
+new_tag=$(echo $old_tag | python /get_new_tag.py)
 
 echo "Pushing tag $new_tag to repo ..."
 
