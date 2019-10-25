@@ -1,0 +1,20 @@
+name: Autotag
+
+on:
+  push:
+    branches: 
+    - master
+    - ^*/citest
+     
+jobs:
+  tag_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+#       - name: Bump version
+#         uses: ./.github/actions/autotag
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
