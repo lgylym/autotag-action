@@ -17,6 +17,7 @@ fi
 new_tag=$(echo $old_tag | python /get_new_tag.py)
 
 echo "Pushing tag $new_tag to repo ..."
+git_refs_url=$(jq .repository.git_refs_url $GITHUB_EVENT_PATH | tr -d '"' | sed 's/{\/sha}//g')
 
 curl -s -X POST $git_refs_url \
 -H "Authorization: token $GITHUB_TOKEN" \
