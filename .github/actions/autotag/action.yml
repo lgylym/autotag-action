@@ -1,0 +1,12 @@
+name: 'Bump version tag'
+description: 'Bump and push git tag on merge'
+author: 'Yongming'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+outputs:
+  new_tag:
+    description: 'Generated tag'
+branding:
+  icon: 'git-merge'  
+  color: 'purple'
