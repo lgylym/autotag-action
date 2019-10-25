@@ -1,4 +1,5 @@
 import datetime
+import os
 import sys
 
 
@@ -13,8 +14,9 @@ def new_version(most_recent_version: str):
 
     if old_year == current_year and old_week == current_week:
         current_version = old_version + 1
-
-    print(f"{current_year}.{current_week}.{current_version}")
+    new_tag = f"{current_year}.{current_week}.{current_version}"
+    
+    print(new_tag)
 
 
 if __name__ == "__main__":
