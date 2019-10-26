@@ -1,0 +1,22 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+#     - name: checkout source
+#       run: |
+#         git fetch
+#         git checkout $GITHUB_SHA
+    - name: Run a one-line script
+      run: |
+        git fetch
+        git checkout $GITHUB_SHA
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
