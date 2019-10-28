@@ -2,6 +2,7 @@
 set eox
 
 # get latest tag
+# you need at least one tag in repo
 old_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
 tag_commit=$(git rev-list -n 1 $old_tag)
 
