@@ -1,7 +1,7 @@
 import datetime
 import os
-import sys
 import re
+import sys
 
 pattern = "(\d+)\.(\d+)\.(\d+)"
 
@@ -20,7 +20,7 @@ def new_version(most_recent_version: str):
         if old_year == current_year and old_week == current_week:
             current_version = old_version + 1
 
-    new_tag = f"{current_year}.{current_week}.{current_version}"    
+    new_tag = f"{current_year}.{current_week}.{current_version}"
     print(new_tag)
 
 
